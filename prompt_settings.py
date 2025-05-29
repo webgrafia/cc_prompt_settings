@@ -231,6 +231,8 @@ def before_cat_recalls_declarative_memories(
         custom_k = number_of_declarative_items
     declarative_recall_config["k"] = custom_k
     declarative_recall_config["threshold"] = declarative_threshold
+    # Add this key for compatibility with other plugins like mock_turtle
+    declarative_recall_config["threshold_declarative_memories"] = declarative_threshold
 
     return declarative_recall_config
 
