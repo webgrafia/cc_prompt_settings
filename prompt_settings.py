@@ -20,7 +20,7 @@ episodic_threshold = 0.5
 def update_variables(settings, prompt_settings):
     global only_local, custom_prefix, lang, legacy, disable_episodic, disable_declarative, disable_procedural, number_of_episodic_items, number_of_declarative_items, declarative_threshold, episodic_threshold
     lang = settings["language"]
-    legacy = settings["legacy"]
+    legacy = settings["legacy_mode"]
     only_local = settings["only_local_responses"]
     disable_episodic = settings["disable_episodic_memories"]
     disable_declarative = settings["disable_declarative_memories"]
@@ -50,8 +50,8 @@ def update_variables(settings, prompt_settings):
             custom_prefix = prompt_settings["prompt_prefix"]
         if "language" in prompt_settings:
             lang = prompt_settings["language"]
-        if "legacy" in prompt_settings:
-            legacy = prompt_settings["legacy"]
+        if "legacy_mode" in prompt_settings:
+            legacy = prompt_settings["legacy_mode"]
         if "only_local_responses" in prompt_settings:
             only_local = prompt_settings["only_local_responses"]
 
